@@ -1,0 +1,11 @@
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\bin\Debug\net7.0\SocialNetwork.Core.Domain.deps.json
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\bin\Debug\net7.0\SocialNetwork.Core.Domain.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\bin\Debug\net7.0\SocialNetwork.Core.Domain.pdb
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.AssemblyInfo.cs
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\refint\SocialNetwork.Core.Domain.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\SocialNetwork.Core.Domain.pdb
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Domain\obj\Debug\net7.0\ref\SocialNetwork.Core.Domain.dll

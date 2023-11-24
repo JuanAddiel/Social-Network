@@ -1,0 +1,15 @@
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\bin\Debug\net7.0\SocialNetwork.Core.Application.deps.json
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\bin\Debug\net7.0\SocialNetwork.Core.Application.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\bin\Debug\net7.0\SocialNetwork.Core.Application.pdb
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\bin\Debug\net7.0\SocialNetwork.Core.Domain.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\bin\Debug\net7.0\SocialNetwork.Core.Domain.pdb
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.csproj.AssemblyReference.cache
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.AssemblyInfoInputs.cache
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.AssemblyInfo.cs
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.csproj.CoreCompileInputs.cache
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.csproj.CopyComplete
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\refint\SocialNetwork.Core.Application.dll
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\SocialNetwork.Core.Application.pdb
+C:\Users\addie\source\repos\SocialNetwork\SocialNetwork.Core.Application\obj\Debug\net7.0\ref\SocialNetwork.Core.Application.dll

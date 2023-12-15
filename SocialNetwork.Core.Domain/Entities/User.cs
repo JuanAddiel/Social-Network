@@ -14,6 +14,7 @@ namespace SocialNetwork.Core.Domain.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime Birthdate { get; set; }
+        public string Photo { get; set; }
         public string Sexo { get; set; }
         public ICollection<Friend> Friends { get; set; }
         public ICollection<Comment> Comments { get; set; }

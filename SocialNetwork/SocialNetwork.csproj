@@ -16,6 +16,11 @@
   <ItemGroup>
     <ProjectReference Include="..\SocialNetwork.Core.Application\SocialNetwork.Core.Application.csproj" />
     <ProjectReference Include="..\SocialNetwork.Infrastructured.Persistence\SocialNetwork.Infrastructured.Persistence.csproj" />
+    <ProjectReference Include="..\SocialNetwork.Infrastructured.Shared\SocialNetwork.Infrastructured.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middlew\" />
   </ItemGroup>
 
 </Project>

@@ -15,7 +15,6 @@ namespace SocialNetwork.Core.Application.Helpers
             {
                 byte[] ps = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 StringBuilder builder = new();
-                //Convert byte a string
                 for (int i = 0; i < ps.Length; i++)
                 {
                     builder.Append(ps[i].ToString("x2"));

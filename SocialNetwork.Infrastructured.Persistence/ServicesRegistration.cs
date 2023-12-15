@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SocialNetwork.Core.Application.Interface.Repositories;
 using SocialNetwork.Infrastructured.Persistence.Context;
+using SocialNetwork.Infrastructured.Persistence.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,11 @@ namespace SocialNetwork.Infrastructured.Persistence
             services.AddDbContext<ApplicationContext>(
                 a => a.UseSqlServer(configuration.GetConnectionString("SocialNetwork")
                 , m => m.MigrationsAssembly(typeof(ApplicationContext).Assembly.FullName)));
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IPostRepository, PostRepository>();
+            services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<IFriendRepository, FriendRepository>();
         }
     }
 }

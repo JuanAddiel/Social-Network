@@ -17,6 +17,7 @@ namespace SocialNetwork.Core.Application
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IGenericService<,,>), typeof(GenericService<,,>));
+            services.AddTransient<IUserService, UserService>();
 
         }
     }

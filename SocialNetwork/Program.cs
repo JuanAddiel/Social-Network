@@ -1,6 +1,7 @@
 using SocialNetwork.Core.Application;
 using SocialNetwork.Infrastructured.Persistence;
 using SocialNetwork.Infrastructured.Shared;
+using SocialNetwork.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddPersistences(builder.Configuration);
 builder.Services.AddSession();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<ValidationSession, ValidationSession>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

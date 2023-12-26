@@ -52,12 +52,10 @@ namespace SocialNetwork.Core.Application.Services
             return result;
         }
 
-        public virtual async Task<SaveViewModel> Update(SaveViewModel entity, int id)
+        public virtual async Task Update(SaveViewModel entity, int id)
         {
             Entity entry = _mapper.Map<Entity>(entity);
-            entry = await _repository.Update(entry, id);
-            SaveViewModel vm = _mapper.Map<SaveViewModel>(entry);
-            return vm;
+            await _repository.Update(entry, id);
         }
     }
 }

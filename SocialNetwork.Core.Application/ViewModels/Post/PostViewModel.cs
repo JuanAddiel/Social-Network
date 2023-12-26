@@ -17,7 +17,7 @@ namespace SocialNetwork.Core.Application.ViewModels.Post
         public string LastNameUser { get; set; }
         public string ImgUrlUser { get; set; }
         public int CommentsCount { get; set; }
-        public DateTime PostDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
         public UserViewModel User { get; set; }
         public ICollection<CommentViewModel> comments { get; set; }
 

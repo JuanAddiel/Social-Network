@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SocialNetwork.Core.Domain.Common;
 using SocialNetwork.Core.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,26 @@ namespace SocialNetwork.Infrastructured.Persistence.Context
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
 
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+        {
+            foreach (var entry  in ChangeTracker.Entries<AuditableBaseEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreatedDate = DateTime.Now;
+                        entry.Entity.CreatedBy = "Juan";
+                        break;
+
+                    case EntityState.Modified:
+                        entry.Entity.UpdatedDate = DateTime.Now;
+                        entry.Entity.UpdatedBy = "Juan";
+                        break;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("users");
@@ -30,6 +51,7 @@ namespace SocialNetwork.Infrastructured.Persistence.Context
             modelBuilder.Entity<User>().Property(u=>u.Password).IsRequired();
             modelBuilder.Entity<User>().Property(u=>u.Birthdate).IsRequired();
             modelBuilder.Entity<User>().Property(u=>u.Sexo).HasMaxLength(20).IsRequired();
+            modelBuilder.Entity<User>().Property(u=>u.Photo);
 
             modelBuilder.Entity<Post>().HasKey(p => p.Id);
             modelBuilder.Entity<Post>().Property(u=>u.Content).IsRequired();

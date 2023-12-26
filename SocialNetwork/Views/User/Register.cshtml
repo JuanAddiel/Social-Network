@@ -1,0 +1,51 @@
+﻿@using SocialNetwork.Core.Application.ViewModels.User
+@model UserSaveViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<form asp-controller="User" asp-action="Register" method="post" enctype="multipart/form-data">
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="Name" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="LastName" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="Birthdate" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="Sexo" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="File" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="Email" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="Password"  placeholder="Password" type="password" class="form-control">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <input asp-for="ConfirmPassword" placeholder="ConfirmPassword" type="password" class="form-control">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

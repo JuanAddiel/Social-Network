@@ -52,12 +52,11 @@ namespace SocialNetwork.Infrastructured.Persistence.Repository
             return entity;
         }
 
-        public virtual async Task<T> Update(T entity, int id)
+        public virtual async Task Update(T entity, int id)
         {
-            var entityToUpdate = await _context.Set<T>().FindAsync(id);
+            T entityToUpdate = await _context.Set<T>().FindAsync(id);
             _context.Entry(entityToUpdate).CurrentValues.SetValues(entity);
             await _context.SaveChangesAsync();
-            return entity;
         }
     }
 }

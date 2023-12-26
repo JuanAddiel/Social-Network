@@ -32,7 +32,7 @@ namespace SocialNetwork.Core.Application.Services
                 NameUser = posts.User.Name,
                 LastNameUser = posts.User.LastName,
                 ImgUrlUser = posts.User.Photo,
-                PostDate = posts.CreatedDate,
+                CreatedDate = posts.CreatedDate,
                 CommentsCount = posts.comments.Count(),
             });
 

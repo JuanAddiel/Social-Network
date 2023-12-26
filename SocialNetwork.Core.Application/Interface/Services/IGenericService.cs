@@ -14,7 +14,7 @@ namespace SocialNetwork.Core.Application.Interface.Services
         Task<IEnumerable<ViewModel>> GetAll();
         Task<ViewModel> GetById(int id);
         Task<SaveViewModel> Add(SaveViewModel entity);
-        Task<SaveViewModel> Update(SaveViewModel entity, int id);
+        Task Update(SaveViewModel entity, int id);
         Task<SaveViewModel> Delete(int id);
     }
 }

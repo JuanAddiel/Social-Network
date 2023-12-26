@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using SocialNetwork.Core.Application.Helpers;
 using SocialNetwork.Core.Application.Interface.Repositories;
 using SocialNetwork.Core.Application.Interface.Services;
 using SocialNetwork.Core.Application.ViewModels.Post;
@@ -20,6 +21,17 @@ namespace SocialNetwork.Core.Application.Services
         {
             _userRepository = userRepository;
             _mapper = mapper;
+        }
+
+        public async Task<UserViewModel> Login(LoginViewModel loginViewModel)
+        {
+            loginViewModel.Password = PasswordEncryption.Encrypt(loginViewModel.Password);
+            var user = await _userRepository.Login(loginViewModel);
+            if(user == null)
+            {
+                return null;
+            }
+            return _mapper.Map<UserViewModel>(user);
         }
         public async Task<IEnumerable<UserViewModel>> GetAllInclude()
         {

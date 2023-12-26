@@ -11,16 +11,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SocialNetwork.Core.Application\SocialNetwork.Core.Application.csproj" />
     <ProjectReference Include="..\SocialNetwork.Infrastructured.Persistence\SocialNetwork.Infrastructured.Persistence.csproj" />
     <ProjectReference Include="..\SocialNetwork.Infrastructured.Shared\SocialNetwork.Infrastructured.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Middlew\" />
   </ItemGroup>
 
 </Project>

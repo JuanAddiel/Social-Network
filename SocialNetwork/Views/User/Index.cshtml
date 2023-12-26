@@ -1,0 +1,32 @@
+﻿@using SocialNetwork.Core.Application.ViewModels.User
+@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<form asp-controller="User" asp-action="Index" method="post">
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label asp-for="Email"  class="col-form-label">Correo</label>
+        </div>
+        <div class="col-auto">
+            <input asp-for="Email" type="email"  class="form-control" aria-describedby="email">
+        </div>
+    </div>
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">Password</label>
+        </div>
+        <div class="col-auto">
+            <input asp-for="Password" type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

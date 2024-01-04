@@ -1,0 +1,100 @@
+﻿@using SocialNetwork.Core.Application.ViewModels.Post
+@model IEnumerable<PostViewModel>
+@{
+    ViewData["title"] = "List Post";
+}
+
+<link href="~/css/post.css" rel="stylesheet">
+<main class="px-3">
+    <h1>Posts.</h1>
+    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="lead">
+        <a asp-controller="Post" asp-action="Create" class="btn btn-lg btn-light fw-bold border-white bg-white">Create Post</a>
+    </p>
+</main>
+<div class="container">
+    <div class="row">
+        @foreach(var item in Model)
+        {
+            <div class="col-md-5">
+                <div class="media g-mb-30 media-comment">
+
+                    <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
+                        <div class="g-mb-15">
+
+                            <h5 class="h5 g-color-gray-dark-v1 mb-0">@item.NameUser</h5>
+
+                            <span class="g-color-gray-dark-v4 g-font-size-12">@item.CreatedDate</span>
+                            <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                                <i class="fa fa-trash-o g-pos-rel g-top-1 g-mr-3"></i>
+                                @item.CommentsCount
+                            </a>
+                            <div class="card rounded shadow-sm border-0">
+
+                                <div class="card-body p-4">
+                                    @if(item.imgUrl != null)
+                                    {
+                                        <img src="@item.imgUrl" alt="" class="img-fluid d-block mx-auto mb-3">
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            @item.Content
+                        </p>
+
+                        <ul class="list-inline d-sm-flex my-0">
+                            <li class="list-inline-item g-mr-20">
+                                <a href="#" class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" data-bs-toggle="modal" data-bs-target="#marcaModal-@item.Id">
+                                    <i class="fa fa-trash-o g-pos-rel g-top-1 g-mr-3"></i>
+                                    
+                                </a>
+                            </li> 
+                            <li></li>
+                            <li class="list-inline-item g-mr-20">
+                                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" asp-controller="Post" asp-action="Edit" asp-route-id="@item.Id">
+                                    <i class="fa fa-pencil-square-o g-pos-rel g-top-1 g-mr-3"></i>
+
+                                </a>
+                            </li>
+                            <li class="list-inline-item ml-auto">
+                                <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" asp-controller="Comment" asp-action="Index" asp-route-postId="@item.Id">
+                                    <i class="fa fa-reply g-pos-rel g-top-1 g-mr-3"></i>
+                                    Comments
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="marcaModal-@item.Id" tabindex="-1" aria-labelledby="marcaModalLabel-@item.Id" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="marcaModalLabel-@item.Id">@item.NameUser</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card-header bg-danger text-light">
+                                <p>@item.Content?</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <form asp-action="Delete" method="post" asp-route-id="@item.Id" asp-controller="Post">
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+
+                            </form>
+                            <button type="button" data-bs-dismiss="modal" class="btn btn-secondary">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+   
+        
+    </div>
+</div>

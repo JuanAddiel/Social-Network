@@ -25,7 +25,6 @@ namespace SocialNetwork.Core.Application.Services
 
         public async Task<UserViewModel> Login(LoginViewModel loginViewModel)
         {
-            loginViewModel.Password = PasswordEncryption.Encrypt(loginViewModel.Password);
             var user = await _userRepository.Login(loginViewModel);
             if(user == null)
             {
@@ -33,9 +32,9 @@ namespace SocialNetwork.Core.Application.Services
             }
             return _mapper.Map<UserViewModel>(user);
         }
-        public async Task<IEnumerable<UserViewModel>> GetAllInclude()
+        public async Task<IEnumerable<UserViewModel>> GetAllInclude(int skip, int take)
         {
-            var users = await _userRepository.GetAllInclude(new List<string> { "Posts", "Comments", "Friends" });
+            var users = await _userRepository.GetAllInclude(new List<string> { "Posts", "Comments", "Friends" }, skip,take);
             return users.Select(users => new UserViewModel
             {
                 Id = users.Id,

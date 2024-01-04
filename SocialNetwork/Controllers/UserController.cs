@@ -74,5 +74,17 @@ namespace SocialNetwork.Controllers
             }
             return RedirectToRoute(new { controller = "User", action = "Index" });
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            if (!validationSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
+            }
+            httpContextAccessor.HttpContext.Session.Clear();
+
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
+
+        }
     }
 }

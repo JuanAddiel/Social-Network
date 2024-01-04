@@ -18,6 +18,10 @@ namespace SocialNetwork.Core.Application
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddTransient(typeof(IGenericService<,,>), typeof(GenericService<,,>));
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IPostService, PostService>();
+            services.AddTransient<ICommentService, CommentService>();
+            services.AddTransient<IFriendService, FriendService>();
+
 
         }
     }

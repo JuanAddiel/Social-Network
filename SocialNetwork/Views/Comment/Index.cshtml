@@ -1,0 +1,67 @@
+﻿@inject IHttpContextAccessor _httpContext;
+@using SocialNetwork.Middleware;
+@using SocialNetwork.Core.Application.Helpers;
+@using SocialNetwork.Core.Application.ViewModels.Comment
+@using SocialNetwork.Core.Application.ViewModels.User
+@model IEnumerable<CommentViewModel>
+@{
+    ViewData["Title"] = "Comments";
+    var user = _httpContext.HttpContext.Session.Get<UserViewModel>("user").Id;
+    var postId = Context.Request.Query["postId"];
+    int pageSize = ViewBag.Take; // Puedes obtener el tamaño de la página desde ViewBag u otra fuente
+    int currentPage = ViewBag.Skip / pageSize + 1;
+    int totalPages = (int)Math.Ceiling(Model.Count() / (double)ViewBag.Take);
+
+}
+<link href="~/css/comment.css" rel="stylesheet">
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-5 col-md-6 col-12 pb-4">
+            @foreach (var item in Model)
+            {
+
+            <div class="comment mt-4 text-justify float-left">
+                <img src="@item.ImgUrlUser" alt="" class="rounded-circle" width="40" height="40">
+                <h4>@item.NameUser @item.LastNameUser</h4>
+                <span>- @item.CreatedAt</span>
+                <br>
+                <p class="">@item.Content </p>
+            </div>
+            }
+        </div>
+
+      
+        <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+            <form id="algin-form" asp-controller="Comment" asp-action="Create">
+                <div class="form-group">
+                    <h4>Leave a comment</h4>
+                    <label for="message">Comments</label>
+                    <textarea name="msg" msg cols="30" rows="5" class="form-control"></textarea>
+                </div>
+                <input type="hidden" name="userId" value="@user" />
+                <input type="hidden" name="postId" value="@postId" />
+                <div class="form-group">
+                    <button type="submit" id="post" class="btn btn-primary">Post Comment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+
+
+
+
+    <div aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" asp-controller="Comment" asp-action="Index" asp-route-postId="@postId" asp-route-skip="0">1</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Comment" asp-action="Index" asp-route-postId="@postId" asp-route-skip="1">2</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Comment" asp-action="Index" asp-route-postId="@postId" asp-route-skip="2">3</a></li>
+            <li class="page-item"><a class="page-link" asp-controller="Comment" asp-action="Index" asp-route-postId="@postId" asp-route-skip="3">4</a></li>
+        </ul>
+    </div>
+
+
+</div>

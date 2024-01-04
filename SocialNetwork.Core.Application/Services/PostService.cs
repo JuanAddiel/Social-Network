@@ -21,20 +21,20 @@ namespace SocialNetwork.Core.Application.Services
             _postRepository = postRepository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<PostViewModel>> GetAllInclude()
+        public async Task<IEnumerable<PostViewModel>> GetAllInclude(int skip, int take)
         {
-            var posts = await _postRepository.GetAllInclude(new List<string> { "User" });
-            return posts.Select(posts => new PostViewModel
+            var posts = await _postRepository.GetAllInclude(new List<string> { "User" }, skip, take);
+            return posts.Select(post => new PostViewModel
             {
-                Id = posts.Id,
-                Content = posts.Content,
-                UserId = posts.UserId,
-                NameUser = posts.User.Name,
-                LastNameUser = posts.User.LastName,
-                ImgUrlUser = posts.User.Photo,
-                CreatedDate = posts.CreatedDate,
-                CommentsCount = posts.comments.Count(),
-            });
+                Id = post.Id,
+                Content = post.Content,
+                UserId = post.UserId,
+                NameUser = post.User.Name,
+                LastNameUser = post.User.LastName,
+                CreatedDate = post.CreatedDate,
+                imgUrl = post.imgUrl,
+                CommentsCount = post.comments?.Count() ?? 0,
+            }).ToList();
 
         }
     }

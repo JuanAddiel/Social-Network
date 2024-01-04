@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bA9u/gQPq/u+jDKgpxm/LSCIkLPO0dRcOvnZejwrGdU=",
+  "Hash": "UgpMnToeN8Yr4tV4yBxkx0OgIdVD3+pJYBRFrHCNd2M=",
   "Source": "SocialNetwork",
   "BasePath": "_content/SocialNetwork",
   "Mode": "Default",
@@ -51,6 +51,40 @@
       "OriginalItemSpec": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\SocialNetwork.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\comment.css",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "css/comment.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\comment.css"
+    },
+    {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\post.css",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "css/post.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\post.css"
+    },
+    {
       "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\site.css",
       "SourceId": "SocialNetwork",
       "SourceType": "Discovered",
@@ -85,6 +119,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\download.png",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "Images/download.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\download.png"
+    },
+    {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\Post\\1\\9e127abd-e720-4a44-aa95-df1367ddae01.jpg",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "Images/Post/1/9e127abd-e720-4a44-aa95-df1367ddae01.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Post\\1\\9e127abd-e720-4a44-aa95-df1367ddae01.jpg"
+    },
+    {
       "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\0\\fb0cb520-0570-430a-bcc5-e735de1ddf06.png",
       "SourceId": "SocialNetwork",
       "SourceType": "Discovered",
@@ -100,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\User\\0\\fb0cb520-0570-430a-bcc5-e735de1ddf06.png"
+    },
+    {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\1\\0921091f-8139-4630-9991-c5da12659cfc.png",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "Images/User/1/0921091f-8139-4630-9991-c5da12659cfc.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\User\\1\\0921091f-8139-4630-9991-c5da12659cfc.png"
     },
     {
       "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\10\\8d6f43e7-ffba-4194-aae2-62f82f34a1d0.png",
@@ -253,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\User\\18\\748f6e7c-8ee2-4a95-bdbf-676c2790ac0b.png"
+    },
+    {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\2\\8abec2ad-9bf3-4c1b-9f1b-49500449c9b4.png",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "Images/User/2/8abec2ad-9bf3-4c1b-9f1b-49500449c9b4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\User\\2\\8abec2ad-9bf3-4c1b-9f1b-49500449c9b4.png"
     },
     {
       "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\3\\f1cda4a8-95bf-4bae-884d-6c816d4926b1.png",
@@ -1341,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Properties\\launchSettings.json",
+      "SourceId": "SocialNetwork",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\",
+      "BasePath": "_content/SocialNetwork",
+      "RelativePath": "Properties/launchSettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Properties\\launchSettings.json"
     }
   ]
 }

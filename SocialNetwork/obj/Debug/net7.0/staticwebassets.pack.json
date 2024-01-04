@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SocialNetwork.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\Post\\1\\9e127abd-e720-4a44-aa95-df1367ddae01.jpg",
+      "PackagePath": "staticwebassets\\Images\\Post\\1\\9e127abd-e720-4a44-aa95-df1367ddae01.jpg"
+    },
+    {
       "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\0\\fb0cb520-0570-430a-bcc5-e735de1ddf06.png",
       "PackagePath": "staticwebassets\\Images\\User\\0\\fb0cb520-0570-430a-bcc5-e735de1ddf06.png"
     },
@@ -45,6 +49,14 @@
       "PackagePath": "staticwebassets\\Images\\User\\18\\748f6e7c-8ee2-4a95-bdbf-676c2790ac0b.png"
     },
     {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\1\\0921091f-8139-4630-9991-c5da12659cfc.png",
+      "PackagePath": "staticwebassets\\Images\\User\\1\\0921091f-8139-4630-9991-c5da12659cfc.png"
+    },
+    {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\2\\8abec2ad-9bf3-4c1b-9f1b-49500449c9b4.png",
+      "PackagePath": "staticwebassets\\Images\\User\\2\\8abec2ad-9bf3-4c1b-9f1b-49500449c9b4.png"
+    },
+    {
       "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\3\\f1cda4a8-95bf-4bae-884d-6c816d4926b1.png",
       "PackagePath": "staticwebassets\\Images\\User\\3\\f1cda4a8-95bf-4bae-884d-6c816d4926b1.png"
     },
@@ -67,6 +79,22 @@
     {
       "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\User\\9\\f06ff13e-7dcf-452e-ba19-71a46801d7a0.png",
       "PackagePath": "staticwebassets\\Images\\User\\9\\f06ff13e-7dcf-452e-ba19-71a46801d7a0.png"
+    },
+    {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Images\\download.png",
+      "PackagePath": "staticwebassets\\Images\\download.png"
+    },
+    {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\Properties\\launchSettings.json",
+      "PackagePath": "staticwebassets\\Properties\\launchSettings.json"
+    },
+    {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\comment.css",
+      "PackagePath": "staticwebassets\\css\\comment.css"
+    },
+    {
+      "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\post.css",
+      "PackagePath": "staticwebassets\\css\\post.css"
     },
     {
       "Id": "C:\\Users\\addie\\source\\repos\\SocialNetwork\\SocialNetwork\\wwwroot\\css\\site.css",

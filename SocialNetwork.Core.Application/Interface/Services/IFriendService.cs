@@ -11,6 +11,6 @@ namespace SocialNetwork.Core.Application.Interface.Services
 {
     public interface IFriendService:IGenericService<FriendSaveViewModel, FriendViewModel, Friend>
     {
-        Task<IEnumerable<FriendViewModel>> GetAllInclude();
+        Task<IEnumerable<FriendViewModel>> GetAllInclude(int skip, int take);
     }
 }

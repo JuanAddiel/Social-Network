@@ -11,7 +11,7 @@ namespace SocialNetwork.Core.Application.Interface.Services
 {
     public interface IUserService:IGenericService<UserSaveViewModel, UserViewModel, User>
     {
-        Task<IEnumerable<UserViewModel>> GetAllInclude();
+        Task<IEnumerable<UserViewModel>> GetAllInclude(int skip, int take);
         Task<UserViewModel> Login(LoginViewModel loginViewModel);
     }
 }

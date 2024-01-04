@@ -34,16 +34,18 @@ namespace SocialNetwork.Infrastructured.Persistence.Repository
         public virtual async Task<IEnumerable<T>> GetAll()
         {
             return await _context.Set<T>().ToListAsync();
+            //todo: hacer listados
+            //return await _context.Set<T>().Skip(1).Take(1).ToListAsync();
         }
 
-        public virtual async Task<IEnumerable<T>> GetAllInclude(List<string> properties)
+        public virtual async Task<IEnumerable<T>> GetAllInclude(List<string> properties, int skip, int take)
         {
             var query = _context.Set<T>().AsQueryable();
             foreach (var property in properties)
             {
                 query = query.Include(property);
             }
-            return await query.ToListAsync();
+            return await query.Skip(skip).Take(take).ToListAsync();
         }
 
         public virtual async Task<T> GetById(int id)

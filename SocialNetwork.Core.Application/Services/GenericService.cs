@@ -45,10 +45,10 @@ namespace SocialNetwork.Core.Application.Services
             return _mapper.Map<IEnumerable<ViewModel>>(entities);
         }
 
-        public virtual async Task<ViewModel> GetById(int id)
+        public virtual async Task<SaveViewModel> GetById(int id)
         {
             var entity = await _repository.GetById(id);
-            ViewModel result = _mapper.Map<ViewModel>(entity);
+            SaveViewModel result = _mapper.Map<SaveViewModel>(entity);
             return result;
         }
 

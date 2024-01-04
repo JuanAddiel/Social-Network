@@ -1,0 +1,63 @@
+﻿@using SocialNetwork.Core.Application.ViewModels.Post
+@model PostSaveViewModel
+@{
+    ViewData["Title"] = "create";
+    var isEdit = Model.Id != null;
+}
+<div class="container">
+    <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+            <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+            <h1>Create an post</h1>
+            <p class="font-italic text-muted mb-0">Create a minimal registeration page using Bootstrap 4 HTML form elements.</p>
+            <p class="font-italic text-muted">
+                Snippet By <a href="https://bootstrapious.com" class="text-muted">
+                    <u>Bootstrapious</u>
+                </a>
+            </p>
+        </div>
+
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+            <form asp-controller="Post" asp-action="@(isEdit == true ? "Edit" :"Create")" method="post" enctype="multipart/form-data">
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                <div class="row">
+
+                    <!-- First Name -->
+                    <div class="input-group col-lg-6 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-user text-muted"></i>
+                            </span>
+                        </div>
+                        <textarea asp-for="Content" placeholder="Content" class="form-control bg-white border-left-0 border-md"></textarea>
+                    </div>
+
+                  
+                    <div class="input-group col-lg-12 mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                <i class="fa fa-envelope text-muted"></i>
+                            </span>
+                        </div>
+                        <input asp-for="File" name="File" placeholder="File" class="form-control bg-white border-left-0 border-md">
+                    </div>
+                    <input type="hidden" asp-for="UserId" class="form-control">
+                    <input type="hidden" asp-for="Id" class="form-control">
+                    <input type="hidden" asp-for="ImgUrl" class="form-control">
+
+                    <div class="form-group col-lg-12 mx-auto mb-0">
+                        <button type="submit" class="btn btn-primary btn-block py-2">
+                            <span class="font-weight-bold">Edit post</span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

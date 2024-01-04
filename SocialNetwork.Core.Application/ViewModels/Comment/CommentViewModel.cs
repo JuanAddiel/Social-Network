@@ -17,6 +17,7 @@ namespace SocialNetwork.Core.Application.ViewModels.Comment
         public string NameUser { get; set; }
         public string LastNameUser { get; set; }
         public string ImgUrlUser { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public UserViewModel User { get; set; }
         public PostViewModel Post { get; set; }
     }

@@ -21,9 +21,9 @@ namespace SocialNetwork.Core.Application.Services
             _friendRepository = friendRepository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<FriendViewModel>> GetAllInclude()
+        public async Task<IEnumerable<FriendViewModel>> GetAllInclude(int skip, int take)
         {
-            var friends = await _friendRepository.GetAllInclude(new List<string> {"User"});
+            var friends = await _friendRepository.GetAllInclude(new List<string> { "User" }, skip, take);
             return friends.Select(friends => new FriendViewModel
             {
                 Id = friends.Id,

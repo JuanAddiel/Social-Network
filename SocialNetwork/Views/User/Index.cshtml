@@ -3,30 +3,38 @@
 @{
     ViewData["Title"] = "Login";
 }
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form asp-controller="User" asp-action="Index" method="post">
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" asp-for="Email" id="form1Example13" class="form-control form-control-lg" />
+                        <label class="form-label" for="form1Example13">Email address</label>
+                    </div>
 
-<form asp-controller="User" asp-action="Index" method="post">
-    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label asp-for="Email"  class="col-form-label">Correo</label>
-        </div>
-        <div class="col-auto">
-            <input asp-for="Email" type="email"  class="form-control" aria-describedby="email">
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <input type="password" asp-for="Password" id="form1Example23" class="form-control form-control-lg" />
+                        <label class="form-label" for="form1Example23">Password</label>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <a href="#!">Forgot password?</a>
+                        <a asp-controller="User" asp-action="Register">Register</a>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                </form>
+            </div>
         </div>
     </div>
-    <div class="row g-3 align-items-center">
-        <div class="col-auto">
-            <label for="inputPassword6" class="col-form-label">Password</label>
-        </div>
-        <div class="col-auto">
-            <input asp-for="Password" type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-        </div>
-        <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">
-                Must be 8-20 characters long.
-            </span>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</section>

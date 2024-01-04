@@ -10,6 +10,6 @@ namespace SocialNetwork.Core.Application.Interface.Services
 {
     public interface IPostService:IGenericService<PostSaveViewModel, PostViewModel, Post>
     {
-        Task<IEnumerable<PostViewModel>> GetAllInclude();
+        Task<IEnumerable<PostViewModel>> GetAllInclude(int skip, int take);
     }
 }

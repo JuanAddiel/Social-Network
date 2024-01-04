@@ -21,10 +21,10 @@ namespace SocialNetwork.Core.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<CommentViewModel>> GetAllInclude()
+        public async Task<IEnumerable<CommentViewModel>> GetAllInclude(int postId,int skip, int take)
         {
-            var comments = await _commentRepository.GetAllInclude(new List<string> { "User", "Post"});
-            return comments.Select(comments => new CommentViewModel
+            var comments = await _commentRepository.GetAllInclude(new List<string> { "User", "Post"}, skip, take);
+            return comments.Where(pos=>pos.PostId == postId).Select(comments => new CommentViewModel
             {
                 Id = comments.Id,
                 Content = comments.Content,
@@ -32,7 +32,8 @@ namespace SocialNetwork.Core.Application.Services
                 PostId = comments.PostId,
                 NameUser = comments.User.Name,
                 LastNameUser = comments.User.LastName,
-                ImgUrlUser = comments.User.Photo
+                ImgUrlUser = comments.User.Photo,
+                CreatedAt = comments.CreatedDate
             });
         }
     }

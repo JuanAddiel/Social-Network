@@ -11,6 +11,6 @@ namespace SocialNetwork.Core.Application.Interface.Services
 {
     public interface ICommentService:IGenericService<CommentSaveViewModel, CommentViewModel, Comment>
     {
-        Task<IEnumerable<CommentViewModel>> GetAllInclude();
+        Task<IEnumerable<CommentViewModel>> GetAllInclude(int postId, int skip, int take);
     }
 }

@@ -12,7 +12,7 @@ namespace SocialNetwork.Core.Application.Interface.Repositories
         Task<T> GetById(int id);
         Task<T> Add(T entity);
         Task Update(T entity, int id);
-        Task<IEnumerable<T>> GetAllInclude(List<string> properties);
+        Task<IEnumerable<T>> GetAllInclude(List<string> properties, int skip, int take);
         Task<T> Delete(T entity);
     }
 }

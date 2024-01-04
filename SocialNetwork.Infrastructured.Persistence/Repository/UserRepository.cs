@@ -30,5 +30,10 @@ namespace SocialNetwork.Infrastructured.Persistence.Repository
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginViewModel.Email && u.Password == loginViewModel.Password );
             return user;
         }
+        public async Task<IEnumerable<User>> Filter(string name)
+        {
+            var user = await this.GetAll();
+            return user.Where(p => p.Name.ToLower().Contains(name.ToLower())).ToList();
+        }
     }
 }

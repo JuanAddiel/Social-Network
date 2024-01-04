@@ -11,5 +11,6 @@ namespace SocialNetwork.Core.Application.Interface.Repositories
     public interface IUserRepository : IGenericRepository<User>
     {
         Task<User> Login(LoginViewModel loginViewModel);
+        Task<IEnumerable<User>> Filter(string name);
     }
 }

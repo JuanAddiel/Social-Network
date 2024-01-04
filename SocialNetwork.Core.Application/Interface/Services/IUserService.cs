@@ -13,5 +13,6 @@ namespace SocialNetwork.Core.Application.Interface.Services
     {
         Task<IEnumerable<UserViewModel>> GetAllInclude(int skip, int take);
         Task<UserViewModel> Login(LoginViewModel loginViewModel);
+        Task<IEnumerable<UserViewModel>> FilterName(string name);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SocialNetwork.Core.Application.Helpers;
 using SocialNetwork.Core.Application.Interface.Services;
+using SocialNetwork.Core.Application.Services;
 using SocialNetwork.Core.Application.ViewModels.User;
 using SocialNetwork.Middleware;
 
@@ -17,6 +18,18 @@ namespace SocialNetwork.Controllers
             validationSession = validation;
             this.httpContextAccessor = httpContextAccessor;
 
+        }
+        public async Task<IActionResult> People(string name)
+        {
+            if (!validationSession.HasUser())
+            {
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
+            }
+            if(name == null)
+            {
+                return View(await _userService.GetAll());
+            }
+            return View(await _userService.FilterName(name));
         }
         public IActionResult Index()
         {

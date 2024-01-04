@@ -1,0 +1,38 @@
+﻿@using SocialNetwork.Core.Application.ViewModels.User
+@model IEnumerable<UserViewModel>
+@{
+    ViewData["Title"] = "Listado People";
+}
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">Peoples</h5>
+        <form method="get" asp-action="People" asp-controller="User">
+            <input class=" form-control" name="name" />
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+        <div class="row">
+  
+            <!-- Team member -->
+            @foreach(var item in Model){
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="image-flip">
+                        <div class="mainflip flip-0">
+                            <div class="frontside">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <p><img class=" img-fluid" src="@item.Photo" alt="card image"></p>
+                                        <h4 class="card-title">@item.Name @item.LastName</h4>
+                                        <p class="card-text">@item.Email</p>
+                                        <a asp-controller="Friend" asp-action="Create" asp-route-idUser="@item.Id" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>

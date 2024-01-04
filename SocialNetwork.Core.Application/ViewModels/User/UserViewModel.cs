@@ -17,7 +17,7 @@ namespace SocialNetwork.Core.Application.ViewModels.User
         public string Email { get; set; }
         public string Password { get; set; }
         public DateTime Birthdate { get; set; }
-        public string Photo { get; set; }
+        public string? Photo { get; set; }
         public string Sexo { get; set; }
         public int CountFriends { get; set; }
         public int CountPosts { get; set; }
